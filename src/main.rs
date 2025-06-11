@@ -2,7 +2,7 @@
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
-#[command(name = "cargo-dub", version = "0.1.0", author = "Matheus C. França", about = "A cargo subcommand for dub")]
+#[command(name = "dub", version = "0.1.1", author = "Matheus C. França", about = "A cargo subcommand for dub")]
 struct Args {
     #[command(subcommand)]
     command: Option<Command>,
