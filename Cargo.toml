@@ -1,0 +1,14 @@
+[package]
+name = "cargo-dub"
+version = "0.1.0"
+edition = "2024"
+authors = ["Matheus C. França"]
+description = "A cargo subcommand for dub"
+license = "MIT"
+repository = "https://github.com/kassane/cargo-dub"
+keywords = ["cargo", "dub", "dlang", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+readme = "README.md"
+
+[dependencies]
+clap = { version = "4.5.32", features = ["derive"] }
