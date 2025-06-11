@@ -1,8 +1,9 @@
-// main.rs
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2025 Matheus C. França
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
-#[command(name = "dub", version = "0.1.1", author = "Matheus C. França", about = "A cargo subcommand for dub")]
+#[command(name = "dub", version)]
 struct Args {
     #[command(subcommand)]
     command: Option<Command>,
@@ -110,13 +111,27 @@ fn run_dub(sub: &str, opts: DubOptions) {
         cmd.arg(format!("--arch={}", arch));
     }
 
-    if opts.rdmd { cmd.arg("--rdmd"); }
-    if opts.temp_build { cmd.arg("--temp-build"); }
-    if opts.force { cmd.arg("--force"); }
-    if opts.deep { cmd.arg("--deep"); }
-    if opts.nodeps { cmd.arg("--nodeps"); }
-    if opts.yes { cmd.arg("--yes"); }
-    if opts.non_interactive { cmd.arg("--non-interactive"); }
+    if opts.rdmd {
+        cmd.arg("--rdmd");
+    }
+    if opts.temp_build {
+        cmd.arg("--temp-build");
+    }
+    if opts.force {
+        cmd.arg("--force");
+    }
+    if opts.deep {
+        cmd.arg("--deep");
+    }
+    if opts.nodeps {
+        cmd.arg("--nodeps");
+    }
+    if opts.yes {
+        cmd.arg("--yes");
+    }
+    if opts.non_interactive {
+        cmd.arg("--non-interactive");
+    }
 
     for v in opts.d_versions {
         cmd.arg(format!("--d-version={}", v));
