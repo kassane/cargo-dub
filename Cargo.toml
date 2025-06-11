@@ -1,7 +1,7 @@
 [package]
 name = "cargo-dub"
-version = "0.1.1"
-edition = "2024"
+version = "0.1.2"
+edition = "2021"
 authors = ["Matheus C. França"]
 description = "A cargo subcommand for dub"
 license = "MIT"
@@ -11,8 +11,11 @@ categories = ["command-line-utilities", "development-tools"]
 readme = "README.md"
 
 [dependencies]
-clap = { version = "4.5.32", features = ["derive"] }
+clap = { version = "4.5", features = ["derive"] }
 
 [[bin]]
 name = "cargo-dub"
 path = "src/main.rs"
+
+[dev-dependencies]
+tempfile = "3.20.0"

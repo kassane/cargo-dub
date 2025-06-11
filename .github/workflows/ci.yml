@@ -22,10 +22,10 @@ jobs:
         override: true
     
     - name: Build
-      run: cargo build --verbose
+      run: cargo build
       
-    # - name: Run tests
-    #   run: cargo test --verbose
+    - name: Run tests
+      run: cargo test
       
     - name: Check formatting
       run: cargo fmt -- --check

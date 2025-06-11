@@ -3,7 +3,7 @@
 A Rust-based wrapper for the D language package manager (DUB)
 
 ## Requirements
-- Rust 1.83 or higher
+- Rust 1.74 or higher
 - DUB 1.30.0 or higher
 - D compiler (dmd, gdc, ldc)
 
