@@ -19,22 +19,32 @@ cargo install cargo-dub
 - Build-only mode (`cargo dub build`) 
 - Format conversion between dub.json and dub.sdl (`cargo dub convert`)
 - Pass-through mode for raw DUB commands (`cargo dub raw`)
+- Package dependency management (`cargo dub add`, `cargo dub remove`)
+- Package initialization (`cargo dub init`)
+- Build cache management (`cargo dub clean`)
+- D-Scanner linting integration (`cargo dub lint`)
+- Build description generation (`cargo dub describe`)
+- Package fetching (`cargo dub fetch`)
 
 ## Helper
 
 ```bash
-A cargo subcommand for dub
-
 Usage: cargo-dub [COMMAND]
 
 Commands:
-  run      Build and run the package (default)
-  build    Only build the package
-  convert  Convert between dub.json and dub.sdl
-  raw      Pass-through to dub with raw arguments
-  help     Print this message or the help of the given subcommand(s)
+  run       Build and run package
+  build     Build package
+  convert   Convert dub.json/dub.sdl
+  raw       Pass raw arguments to dub
+  describe  Print JSON build description for package and dependencies
+  add       Add packages as dependencies
+  remove    Remove packages from dependencies
+  fetch     Fetch packages to a shared location
+  init      Initialize an empty package
+  clean     Remove cached build files
+  lint      Run D-Scanner linter tests
+  help      Print this message or the help of the given subcommand(s)
 
 Options:
-  -h, --help     Print help
-  -V, --version  Print version
+  -h, --help  Print help
 ```

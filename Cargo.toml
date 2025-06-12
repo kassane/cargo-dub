@@ -1,6 +1,6 @@
 [package]
 name = "cargo-dub"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["Matheus C. França"]
 description = "A cargo subcommand for dub"
